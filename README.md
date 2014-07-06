@@ -45,6 +45,8 @@ chmod +x apt-cyg
   - Character set : UTF-8 
 
 #.bashrc
+書き換えたら`source ~/.bashrc`実行かCygwinを再起動
+
 ```
 #Cygwinでは先にgemファイルの指定が必要(なかったら直打ち)
 alias gem='gem.bat'
@@ -68,7 +70,7 @@ fi
 
 #lsコマンドするときにアイテムの種類によって色分け
 if [ -x /usr/bin/dircolors ]; then
-  test -r ~/cygwin/.dircolors && eval "$(dircolors -b ~/cygwin/.dircolors)" ||     eval "$(dircolors -b)"
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
   #alias dir='dir --color=auto'
   #alias vdir='vdir --color=auto'
   alias ls='ls -hF --color=auto' # classify files in colour
