@@ -27,7 +27,7 @@ $ cd apt-cyg
 $ chmod +x apt-cyg
 ```
 
-##↑で通らない場合
+###↑で通らない場合
 参考:[CygWinのapt-cygが上手くいかない場合](http://hujo.hateblo.jp/entry/2013/11/10/213119)
 
 ```
@@ -45,6 +45,7 @@ $ apt-cyg --use-setuprc update
 
 基本はutf-8を使う。  
 postgresql使うときはsjisで表示しないと文字化けするので以下のutf8をsjisに変更する。
+(postgresql側をutf8に変更してもいい)
 
 - タイトルバーのCygwinアイコンをクリック→options→Text
   - Locale : ja_JP
@@ -56,7 +57,7 @@ postgresql使うときはsjisで表示しないと文字化けするので以下
 export TZ=JST-9
 # 言語の指定
 export LANG=ja_JP.utf8
-# 出力文字セットをSJISとする。(libiconv)
+# 出力文字セットをUTF-8とする。(libiconv)
 export OUTPUT_CHARSET=utf8
 # 日本語ファイル名表示
 alias ls='ls --show-control-chars'
