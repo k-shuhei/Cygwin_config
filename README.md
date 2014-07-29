@@ -6,20 +6,23 @@ Cygwin_config
 [RubyGems + Cygwin: POSIX path not found by ruby.exe](http://stackoverflow.com/questions/3831131/rubygems-cygwin-posix-path-not-found-by-ruby-exe)  
 [Cygwinを導入してみた](http://nukino.github.io/blog/2012/02/02/Cygwin/)
 
-#Cygwinをセットアップするときに個人的に入れといた方がいいパッケージ
+#Cygwinをセットアップするときに入れといた方がいいパッケージ
 Vimとssh（GitHub等）使うなら
 - Editers/vim 
-- Net/openssh         
+- Net/openssh
 
-後述
+後述(apt-cyg導入用)
 - Web/wget            
   - Devel/git-svn
   - Base/gawk 
   - Utils/bzip2 
   - Utils/tar 
 
-wgetを入れて、apt-cygでパッケージ管理をするととても楽  
-参考:[Cygwinにapt-cygを導入する ](http://kowaimononantenai.blogspot.jp/2013/12/cygwinapt-cyg.html)
+wgetを入れて、apt-cygでパッケージ管理をするととても楽
+
+setup.exeを使わずにパッケージを入れられる
+
+参考:[Cygwinにapt-cygを導入する](http://kowaimononantenai.blogspot.jp/2013/12/cygwinapt-cyg.html)
 
 ```
 $ git clone git@github.com:kou1okada/apt-cyg.git
@@ -103,4 +106,19 @@ if [ -x /usr/bin/dircolors ]; then
   alias vdir='ls --color=auto --format=long'
 fi
 
+```
+
+#gitの初期設定
+参考:[Git のカスタマイズ - Git の設定](git-scm.com/book/ja/Git-のカスタマイズ-Git-の設定)
+
+```
+#githubのユーザーとEメールアドレスを登録
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+#エディタ
+$ git config --global core.editor vim
+
+#色付け
+$ git config --global color.ui true
 ```
