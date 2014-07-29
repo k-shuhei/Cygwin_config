@@ -22,9 +22,19 @@ wgetを入れて、apt-cygでパッケージ管理をするととても楽
 参考:[Cygwinにapt-cygを導入する ](http://kowaimononantenai.blogspot.jp/2013/12/cygwinapt-cyg.html)
 
 ```
-git clone git@github.com:kou1okada/apt-cyg.git
-cd apt-cyg
-chmod +x apt-cyg
+$ git clone git@github.com:kou1okada/apt-cyg.git
+$ cd apt-cyg
+$ chmod +x apt-cyg
+```
+
+##↑で通らない場合
+参考:[CygWinのapt-cygが上手くいかない場合](http://hujo.hateblo.jp/entry/2013/11/10/213119)
+
+```
+$ wget https://raw.github.com/kou1okada/apt-cyg/master/apt-cyg
+$ chmod +x apt-cyg
+$ cp apt-cyg /bin/
+$ apt-cyg --use-setuprc update
 ```
 
 ほかにもあったけど忘れた  
